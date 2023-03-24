@@ -221,7 +221,7 @@ lr_wf <-
   add_model(lr_spec) |> 
   add_formula(class ~ .)
 
-lr_fit_cv <- lr_workflow |> 
+lr_fit_cv <- lr_wf |> 
   fit_resamples(cell_folds)
 
 lr_fit_cv |> 
@@ -263,4 +263,5 @@ lr_fit_cv <- lr_workflow |>
   fit_resamples(cell_folds, control = options)
 
 stopCluster(cl)
+
 
